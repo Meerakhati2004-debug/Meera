@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>University Campus Portal</title>
+<style>
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+.bg-zoom {
+  animation: slowZoom 15s ease-in-out infinite alternate;
+}
+</style>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-100 text-gray-800 scroll-smooth">
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="fixed top-0 w-full bg-blue-600 text-white shadow-md z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3">
+    <div class="flex justify-between items-center">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="KBC2.png" alt="Logo" class="h-12 w-auto">
+      </div>
+
+      <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+      <!-- Mobile Menu Icon -->
+      <label for="menu-toggle" class="md:hidden text-2xl cursor-pointer">
+        ☰
+      </label>
+
+      <!-- Menu -->
+      <ul class="absolute md:static left-0 top-full w-full md:w-auto
+        bg-blue-600 md:bg-transparent
+        md:flex gap-6
+        px-4 py-3 md:p-0
+        hidden peer-checked:block md:block">
+
+        <li><a href="#home" class="block py-2 hover:text-yellow-300">Home</a></li>
+        <li><a href="#resume" class="block py-2 hover:text-yellow-300">Resume</a></li>
+        <li><a href="#form" class="block py-2 hover:text-yellow-300">Registration</a></li>
+        <li><a href="#map" class="block py-2 hover:text-yellow-300">Campus Map</a></li>
+        <li><a href="#footer" class="block py-2 hover:text-yellow-300">About</a></li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<!-- ================= IMAGE BANNER ================= -->
+
+<section id="home"
+style="height:100vh; padding-top:64px; position:relative; overflow:hidden;">
+
+  <!-- animated background -->
+  <div class="absolute inset-0 bg-zoom"
+       style="background:url('hehe.jpeg') center/cover no-repeat;">
+  </div>
+
+  <!-- dark overlay -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- content -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      University Campus Portal
+    </h2>
+
+    <a href="#resume"
+       class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded shadow
+              hover:scale-110 transition duration-300 ring-4 ring-opacity-50">
+      + Learn More
+    </a>
+  </div>
+
+</section>
+
+
+
+
+<!-- ================= RESUME ================= -->
+
+<section id="resume" class="py-16 max-w-5xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-blue-900 mb-10">Student Resume</h2>
+
+<div class="bg-white rounded-xl shadow-lg p-6 md:flex gap-8 hover:scale-105 transition">
+
+<img src="mk.jpeg"
+alt="Student picture"
+class="rounded-lg  h-80 mx-auto md:mx-0">
+
+<div class="flex-1 space-y-2">
+
+<h3 class="text-2xl font-semibold">Meera Khati</h3>
+<p>Student ID : KBCMK 49081</p>
+<p>Major: Bachelor in Computer Application</p>
+<p>Email: meerakhati7@gmail.com</p>
+<p>Phone: +977 9861506157</p>
+<p>GPA: 3.66 | Year: First Semester</p>
+
+<h4 class="font-semibold mt-4">Skills</h4>
+
+<div>
+<p>HTML</p>
+<div class="w-full bg-gray-200 rounded">
+<div class="bg-blue-900 h-3 rounded w-[90%]"></div>
+</div>
+</div>
+
+<div>
+<p>CSS</p>
+<div class="w-full bg-gray-200 rounded">
+<div class="bg-blue-900 h-3 rounded w-[85%]"></div>
+</div>
+</div>
+
+<div>
+<p>Java</p>
+<div class="w-full bg-gray-200 rounded">
+<div class="bg-blue-900 h-3 rounded w-[70%]"></div>
+</div>
+</div>
+
+<h4 class="font-semibold mt-4">Projects</h4>
+<ul class="list-disc ml-6">
+<li>College Website Frontend</li>
+<li>Java OOP System</li>
+<li>Mini Website Project</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+<!-- ================= FORM ================= -->
+
+<section id="form" class="py-16 bg-slate-200">
+<h2 class="text-3xl font-bold text-center text-blue-900 mb-10">
+Student Registration
+</h2>
+
+<form class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow space-y-6">
+
+<fieldset class="border border-blue-900 p-4 rounded">
+<legend class="px-2 font-semibold text-blue-900">Personal Details</legend>
+
+<div class="grid md:grid-cols-2 gap-4">
+<input required placeholder="Full Name"
+class="p-3 border rounded">
+
+<input type="date" required
+class="p-3 border rounded">
+
+<select class="p-3 border rounded">
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+</div>
+</fieldset>
+
+<fieldset class="border border-blue-900 p-4 rounded">
+<legend class="px-2 font-semibold text-blue-900">Contact Info</legend>
+
+<div class="grid md:grid-cols-2 gap-4">
+<input required placeholder="Address" class="p-3 border rounded">
+<input required type="email" placeholder="Email" class="p-3 border rounded">
+<input required placeholder="Phone" class="p-3 border rounded">
+</div>
+</fieldset>
+
+<fieldset class="border border-blue-900 p-4 rounded">
+<legend class="px-2 font-semibold text-blue-900">Academic Info</legend>
+
+<div class="grid md:grid-cols-2 gap-4">
+
+  <!-- Program -->
+  <select id="program" class="p-3 border rounded w-full">
+    <option value="">Select Program</option>
+    <option value="BCA">BCA</option>
+    <option value="BBS">BBS</option>
+  </select>
+
+  <!-- Semester (BCA only) -->
+  <select id="semester" class="p-3 border rounded w-full hidden">
+    <option value="">Select Semester</option>
+    <option>Semester 1</option>
+    <option>Semester 2</option>
+    <option>Semester 3</option>
+    <option>Semester 4</option>
+    <option>Semester 5</option>
+    <option>Semester 6</option>
+    <option>Semester 7</option>
+    <option>Semester 8</option>
+  </select>
+
+  <!-- Year (BBS only) -->
+  <select id="year" class="p-3 border rounded w-full hidden">
+    <option value="">Select Year</option>
+    <option>Year 1</option>
+    <option>Year 2</option>
+    <option>Year 3</option>
+    <option>Year 4</option>
+  </select>
+
+</div>
+
+
+<input type="file" class="p-3 border rounded">
+</div>
+</fieldset>
+
+<label class="flex gap-2 items-center">
+<input type="checkbox" required>
+I accept terms & conditions
+</label>
+
+<div class="flex gap-4">
+<button class="bg-blue-900 text-white px-6 py-3 rounded hover:bg-blue-700">
+Submit
+</button>
+
+<button type="reset"
+class="bg-gray-500 text-white px-6 py-3 rounded hover:bg-gray-600">
+Reset
+</button>
+</div>
+
+</form>
+</section>
+
+<!-- ================= MAP ================= -->
+
+<section id="map" class="py-16 max-w-6xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-blue-900 mb-10">Campus Map</h2>
+
+<div class="grid md:grid-cols-3 gap-6">
+
+<iframe class="md:col-span-2 w-full h-80 rounded shadow"
+src="https://www.google.com/maps?q=Kathmandu+Business+Campus&output=embed">
+</iframe>
+
+<div class="bg-white p-6 rounded shadow space-y-2">
+<h4 class="font-semibold text-lg">Locations</h4>
+<p>📍 Main Block</p>
+<p>📍 Library</p>
+<p>📍 IT Lab</p>
+<p>📍 Sports Ground</p>
+</div>
+
+</div>
+</section>
+<!-- ================= FOOTER ================= -->
+
+<footer id="footer" class="bg-blue-600 text-white text-center py-10 space-y-3">
+  
+  <p>Kathmandu Business Campus</p>
+
+  <!-- Email -->
+  <p>
+    <a 
+      href="https://kbcampus.edu.np/"
+      class="hover:text-yellow-300 transition duration-300"
+    >
+      info@kbcampus.edu.np
+    </a>
+  </p>
+
+  <!-- Social Media Icons -->
+  <div class="space-x-4 text-xl">
+    <a
+      href="https://www.facebook.com/share/1TLgoafDJa/"
+      target="_blank"
+      class="hover:text-yellow-300 transition duration-300"
+    >
+      <i class="fab fa-facebook"></i>
+    </a>
+
+    <a
+      href="https://www.instagram.com/kathmandu_b_campus?igsh=dWdvcGpjdngxaWM4"
+      target="_blank"
+      class="hover:text-yellow-300 transition duration-300"
+    >
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a
+      href="https://www.tiktok.com/@kathmandubusinesscampus_?_r=1&_t=ZS-93kc4CjfCz3"
+      target="_blank"
+      class="hover:text-yellow-300 transition duration-300"
+    >
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </div>
+
+  <p class="text-sm mt-4">
+    © Copyright 2026 Kathmandu Business Campus. All rights reserved<br>
+    Powered By: Digital Nepal
+  </p>
+
+</footer>
+<script>
+  const program = document.getElementById("program");
+  const semester = document.getElementById("semester");
+  const year = document.getElementById("year");
+
+  program.addEventListener("change", () => {
+    if (program.value === "BCA") {
+      semester.classList.remove("hidden");
+      year.classList.add("hidden");
+      year.value = "";
+    } 
+    else if (program.value === "BBS") {
+      year.classList.remove("hidden");
+      semester.classList.add("hidden");
+      semester.value = "";
+    } 
+    else {
+      semester.classList.add("hidden");
+      year.classList.add("hidden");
+    }
+  });
+</script>
+
+</body>
+</html>
